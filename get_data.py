@@ -83,16 +83,16 @@ def get_user_playlist(username, sp):
 
 def main(username, playlist):
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-    print "Getting user playlist"
+    print ("Getting user playlist")
     get_user_playlist(username, sp)
-    print "Getting playlist content"
+    print ("Getting playlist content")
     get_playlist_content(username, playlist, sp)
-    print "Getting playlist audio features"
+    print ("Getting playlist audio features")
     get_playlist_audio_features(username, playlist, sp)
 
 
 if __name__ == '__main__':
-    print 'Starting...'
+    print ('Starting...')
     parser = argparse.ArgumentParser(description='description')
     parser.add_argument('--username', help='username')
     parser.add_argument('--playlist', help='username')
